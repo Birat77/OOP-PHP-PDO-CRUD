@@ -27,8 +27,10 @@ if (isset($submit)) {
 
     $query = new QueryBuilder($pdo);
     $cases = $query->selectAll('tblcases');
-    header('Location:index.php');
-    // dd($cases);
+    //header('Location:index.php');
+    echo "<pre>";
+    var_dump($cases);
+    echo "</pre>";
 
     // foreach ($cases as $case) {
     //     dd($case->claim);

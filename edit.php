@@ -26,7 +26,8 @@ if (isset($_GET['edit_id'])) {
 ?>
 <div class="container">
 <h2> Edit Case </h2>
-<form action="./update.php?id=<?php echo $row['claim_id'] ?> method="POST">
+<form action="./update.php" method="POST">
+      <input type="hidden" id="claim_id" name="claim_id" value="<?php echo $rowbyid[0]['claim_id'] ?>">
       <div class="d-flex flex-column bd-highlight mb-3">
         <div class="form-group">
           <label for="claim">Claim</label>
@@ -52,7 +53,7 @@ if (isset($_GET['edit_id'])) {
           </select>
           </div>
           <div>
-          <input type="submit" class="btn btn-primary" name="insert" value="UPDATE"/>
+          <input type="submit" class="btn btn-primary" name="update" value="UPDATE"/>
           </div>
         </div>
     </form>
